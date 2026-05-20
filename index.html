@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eleição 2026 — Propósito Estratégico</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --red: #E8392A;
+  --red-dark: #B82B1E;
+  --red-light: #FDF0EE;
+  --ink: #111110;
+  --gray-50: #FAFAF9;
+  --gray-100: #F5F4F1;
+  --gray-200: #E8E6E1;
+  --gray-400: #A8A5A0;
+  --gray-600: #6B6865;
+  --gray-800: #2D2C2A;
+  --green: #1A7A5E;
+  --green-light: #EAF4F0;
+  --amber: #D97706;
+  --amber-light: #FEF3E2;
+  --border: 1px solid #E8E6E1;
+}
+body { font-family: 'Rubik', sans-serif; background: #FAFAF9; color: var(--ink); font-size: 14px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+.container { max-width: 860px; margin: 0 auto; padding: 0 40px; }
+.section { padding: 52px 0; }
+.lbl { display: inline-flex; align-items: center; gap: 8px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--gray-400); margin-bottom: 10px; }
+.lbl::before { content: ''; width: 14px; height: 1.5px; background: var(--red); display: block; }
+h2 { font-size: 22px; font-weight: 600; letter-spacing: -.01em; line-height: 1.2; }
+.sub { margin-top: 8px; font-size: 13px; color: var(--gray-600); max-width: 560px; line-height: 1.6; }
+hr.div { border: none; border-top: var(--border); margin: 0; }
+
+/* HERO */
+.hero { background: var(--ink); color: white; padding: 56px 0 52px; }
+.hero-inner { position: relative; }
+.hero-eyebrow { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: rgba(255,255,255,.35); margin-bottom: 18px; }
+.hero h1 { font-size: clamp(26px, 4vw, 42px); font-weight: 700; letter-spacing: -.02em; line-height: 1.05; margin-bottom: 8px; }
+.hero h1 em { font-style: normal; color: var(--red); }
+.hero-sub { font-size: 14px; color: rgba(255,255,255,.4); font-weight: 300; margin-bottom: 40px; max-width: 480px; }
+
+/* PROPÓSITO DESTAQUE */
+.proposito-box {
+  background: var(--red);
+  border-radius: 14px;
+  padding: 28px 32px;
+  margin-bottom: 28px;
+}
+.proposito-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: rgba(255,255,255,.5); margin-bottom: 12px; }
+.proposito-text { font-size: 18px; font-weight: 600; color: white; line-height: 1.4; }
+
+/* LINHA HISTÓRICA */
+.historico-section { background: white; }
+.timeline { display: flex; flex-direction: column; gap: 0; margin-top: 28px; position: relative; }
+.timeline::before { content: ''; position: absolute; left: 28px; top: 0; bottom: 0; width: 1.5px; background: var(--gray-200); }
+.tl-item { display: flex; gap: 20px; align-items: flex-start; padding: 0 0 28px 0; position: relative; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-year {
+  width: 56px; height: 56px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; letter-spacing: .02em;
+  position: relative; z-index: 1;
+}
+.ty-past { background: var(--gray-100); color: var(--gray-600); border: 2px solid var(--gray-200); }
+.ty-now  { background: var(--red); color: white; border: 2px solid var(--red-dark); }
+.tl-content { padding-top: 14px; flex: 1; }
+.tl-title { font-size: 14px; font-weight: 600; margin-bottom: 5px; color: var(--ink); }
+.tl-desc { font-size: 13px; color: var(--gray-600); line-height: 1.55; }
+.tl-tag {
+  display: inline-block; margin-top: 8px;
+  font-size: 10px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .08em; padding: 3px 10px; border-radius: 100px;
+}
+.tag-muda { background: var(--amber-light); color: var(--amber); }
+.tag-comunica { background: var(--blue-light, #EAF0F8); color: #1B4F8A; }
+.tag-revisao { background: var(--red-light); color: var(--red-dark); }
+.tag-dados { background: var(--green-light); color: var(--green); }
+
+/* DIAGNÓSTICO */
+.diag-section { background: var(--gray-100); }
+.diag-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 24px; }
+.diag-card { background: white; border: var(--border); border-radius: 12px; padding: 20px 22px; }
+.diag-num { font-size: 28px; font-weight: 700; color: var(--ink); letter-spacing: -.02em; line-height: 1; margin-bottom: 4px; }
+.diag-num.red { color: var(--red); }
+.diag-num.green { color: var(--green); }
+.diag-num.amber { color: var(--amber); }
+.diag-label { font-size: 12px; font-weight: 500; color: var(--gray-800); margin-bottom: 5px; }
+.diag-sub { font-size: 11px; color: var(--gray-400); line-height: 1.4; }
+
+.dores-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+.dor-item {
+  background: white; border: var(--border); border-radius: 10px;
+  padding: 14px 16px; display: flex; gap: 12px; align-items: flex-start;
+}
+.dor-rank {
+  width: 24px; height: 24px; border-radius: 6px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; color: white;
+}
+.dr-red { background: var(--red); }
+.dr-amber { background: var(--amber); }
+.dr-gray { background: var(--gray-400); }
+.dor-name { font-size: 12px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+.dor-count { font-size: 11px; color: var(--gray-400); }
+
+/* PROPÓSITO DETALHADO */
+.prop-section { background: white; }
+.prop-linha {
+  background: var(--ink); border-radius: 12px; padding: 24px 28px;
+  margin-bottom: 24px;
+}
+.prop-linha-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: rgba(255,255,255,.3); margin-bottom: 8px; }
+.prop-linha-text { font-size: 16px; font-weight: 600; color: white; line-height: 1.45; }
+.prop-linha-text span { color: var(--red); }
+
+.pilares-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.pilar-card { border: var(--border); border-radius: 12px; padding: 20px 22px; }
+.pilar-icon { font-size: 20px; margin-bottom: 12px; }
+.pilar-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+.pilar-desc { font-size: 12px; color: var(--gray-600); line-height: 1.55; }
+.pilar-meta {
+  margin-top: 10px; display: flex; align-items: center; gap: 6px;
+  font-size: 11px; font-weight: 500; color: var(--green);
+  background: var(--green-light); border-radius: 6px; padding: 4px 10px;
+  width: fit-content;
+}
+
+/* METAS PARCEIROS */
+.metas-section { background: var(--gray-100); }
+.meta-table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; border-radius: 12px; overflow: hidden; border: var(--border); }
+.meta-table th { background: var(--ink); color: rgba(255,255,255,.5); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; padding: 12px 16px; text-align: left; }
+.meta-table td { padding: 13px 16px; font-size: 12px; border-bottom: var(--border); vertical-align: top; }
+.meta-table tr:last-child td { border-bottom: none; }
+.meta-table tr:hover td { background: var(--gray-50); }
+.meta-table td:first-child { font-weight: 600; color: var(--ink); white-space: nowrap; }
+.meta-kpi { display: inline-flex; align-items: center; gap: 4px; background: var(--green-light); color: var(--green); border-radius: 6px; padding: 2px 8px; font-size: 10px; font-weight: 600; }
+.meta-warn { display: inline-flex; align-items: center; gap: 4px; background: var(--red-light); color: var(--red-dark); border-radius: 6px; padding: 2px 8px; font-size: 10px; font-weight: 600; }
+
+/* CONEXÃO AÇÃO */
+.acao-section { background: white; }
+.acao-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 24px; }
+.acao-card { border-radius: 12px; padding: 20px 22px; border: 1.5px solid var(--gray-200); }
+.acao-step { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 10px; }
+.acao-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+.acao-desc { font-size: 12px; color: var(--gray-600); line-height: 1.55; }
+.ac-before { border-color: var(--gray-200); }
+.ac-before .acao-step { color: var(--gray-400); }
+.ac-during { border-color: var(--red); background: var(--red-light); }
+.ac-during .acao-step { color: var(--red); }
+.ac-after { border-color: var(--green); background: var(--green-light); }
+.ac-after .acao-step { color: var(--green); }
+
+/* FOOTER */
+footer { background: var(--ink); padding: 20px 0; }
+.ft { display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: rgba(255,255,255,.3); }
+.ft-brand { font-weight: 600; color: rgba(255,255,255,.5); }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">iFood People · Benefícios · Material estratégico interno</div>
+      <h1>Eleição de Benefícios<br><em>2026</em></h1>
+      <p class="hero-sub">Propósito estratégico, contexto histórico e justificativa de negócio para a ação presencial de 16/06.</p>
+
+      <div class="proposito-box">
+        <div class="proposito-label">Propósito da Eleição 2026</div>
+        <div class="proposito-text">Usar a eleição como motor de inteligência — capturando dados comportamentais reais para resolver dores mapeadas, fortalecer negociações com parceiros e gerar adesão consciente que sustente a rentabilidade do pacote.</div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px;">
+        <div style="background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:10px; padding:16px 18px;">
+          <div style="font-size:10px; text-transform:uppercase; letter-spacing:.1em; color:rgba(255,255,255,.3); margin-bottom:6px;">O que era</div>
+          <div style="font-size:13px; color:rgba(255,255,255,.7); line-height:1.5;">Evento de comunicação e adesão — presença e engajamento como fim</div>
+        </div>
+        <div style="background:rgba(232,57,42,.15); border:1px solid rgba(232,57,42,.3); border-radius:10px; padding:16px 18px;">
+          <div style="font-size:10px; text-transform:uppercase; letter-spacing:.1em; color:rgba(255,255,255,.4); margin-bottom:6px;">O que é em 2026</div>
+          <div style="font-size:13px; color:white; font-weight:500; line-height:1.5;">Motor de dados e conversão — cada stand tem meta de negócio</div>
+        </div>
+        <div style="background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:10px; padding:16px 18px;">
+          <div style="font-size:10px; text-transform:uppercase; letter-spacing:.1em; color:rgba(255,255,255,.3); margin-bottom:6px;">O resultado esperado</div>
+          <div style="font-size:13px; color:rgba(255,255,255,.7); line-height:1.5;">Dados que fundamentam negociações + adesão que melhora rentabilidade</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LINHA HISTÓRICA -->
+<section class="section historico-section">
+  <div class="container">
+    <div class="lbl">Contexto</div>
+    <h2>A jornada que nos trouxe até aqui</h2>
+    <p class="sub">Cada ciclo respondeu a um desafio específico. 2026 é a evolução natural: sair do modo reativo para o modo estratégico.</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year ty-past">2023</div>
+        <div class="tl-content">
+          <div class="tl-title">Mudança e reforço estrutural</div>
+          <div class="tl-desc">Migração do plano de saúde Sulamerica → Bradesco. Base instável: 1 em cada 5 FoodLovers tinha menos de 1 ano de casa. O foco era garantir a sustentação do pacote para uma equipe em renovação acelerada.</div>
+          <span class="tl-tag tag-muda">Reestruturação</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year ty-past">2024</div>
+        <div class="tl-content">
+          <div class="tl-title">Awareness: que benefício é esse?</div>
+          <div class="tl-desc">Crescimento de 18% no headcount exigiu reforçar o pacote inteiro. A estratégia foi awareness total — comunicação ativa via materiais, vídeos, circuitos e experiências presenciais. Tom leve e aderente à cultura iFood.</div>
+          <span class="tl-tag tag-comunica">Comunicação + Crescimento</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year ty-past">2025</div>
+        <div class="tl-content">
+          <div class="tl-title">Revisão e ajustes do pacote</div>
+          <div class="tl-desc">Ano de mudanças concretas: coparticipação, aumento de VA/VR, revisão do home office. A pesquisa revelou 1.601 manifestações qualitativas — com dores reais e latentes que precisam de resposta.</div>
+          <span class="tl-tag tag-revisao">Revisão + Pesquisa</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year ty-now">2026</div>
+        <div class="tl-content">
+          <div class="tl-title">Dados, conversão e rentabilidade</div>
+          <div class="tl-desc">Chegou a hora de fechar o ciclo. A eleição deixa de ser um evento de presença e passa a ser um instrumento de inteligência: capturar dados comportamentais, responder dores mapeadas, engajar no benefício certo e melhorar a rentabilidade do pacote.</div>
+          <span class="tl-tag tag-dados">Dados + Rentabilidade</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- DIAGNÓSTICO DA PESQUISA -->
+<section class="section diag-section">
+  <div class="container">
+    <div class="lbl">Pesquisa 2025 · 1.601 respondentes</div>
+    <h2>O que os dados nos dizem</h2>
+    <p class="sub">A pesquisa da Eleição Geral 2025 é a principal fonte de inteligência para 2026. Ela não é só diagnóstico — é insumo direto para negociação com parceiros.</p>
+
+    <div class="diag-grid">
+      <div class="diag-card">
+        <div class="diag-num green">+43,3</div>
+        <div class="diag-label">NPS do Beneflex</div>
+        <div class="diag-sub">Modelo flexível tem forte aceitação — maior NPS do pacote</div>
+      </div>
+      <div class="diag-card">
+        <div class="diag-num amber">+20,2</div>
+        <div class="diag-label">NPS geral do pacote</div>
+        <div class="diag-sub">Positivo, mas 16,5% de detratores indicam espaço relevante de melhoria</div>
+      </div>
+      <div class="diag-card">
+        <div class="diag-num red">+10,5</div>
+        <div class="diag-label">NPS de conhecimento</div>
+        <div class="diag-sub">Só 25,7% são promotores — lacuna crítica de educação e comunicação</div>
+      </div>
+    </div>
+
+    <div style="margin-top:28px;">
+      <div style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--gray-400); margin-bottom:14px;">Principais dores mapeadas nas respostas abertas</div>
+      <div class="dores-grid">
+        <div class="dor-item">
+          <div class="dor-rank dr-red">1</div>
+          <div>
+            <div class="dor-name">Plano de Saúde — coparticipação e rede</div>
+            <div class="dor-count">218 menções · maior volume de reclamações</div>
+          </div>
+        </div>
+        <div class="dor-item">
+          <div class="dor-rank dr-red">2</div>
+          <div>
+            <div class="dor-name">Defasagem de valores dos benefícios</div>
+            <div class="dor-count">172 menções · percepção vs. inflação e mercado</div>
+          </div>
+        </div>
+        <div class="dor-item">
+          <div class="dor-rank dr-amber">3</div>
+          <div>
+            <div class="dor-name">Beneflex — ampliar categorias</div>
+            <div class="dor-count">151 menções · majoritariamente positivas, pedindo mais</div>
+          </div>
+        </div>
+        <div class="dor-item">
+          <div class="dor-rank dr-amber">4</div>
+          <div>
+            <div class="dor-name">Alimentação — valor e integração app</div>
+            <div class="dor-count">114 menções · cashback e aumento do valor</div>
+          </div>
+        </div>
+        <div class="dor-item">
+          <div class="dor-rank dr-gray">5</div>
+          <div>
+            <div class="dor-name">Home office — estrutura e verba</div>
+            <div class="dor-count">Tema emergente · retirada do "Meu Cantinho" ainda ressoa</div>
+          </div>
+        </div>
+        <div class="dor-item">
+          <div class="dor-rank dr-gray">—</div>
+          <div>
+            <div class="dor-name">Saúde e Alimentação são inegociáveis</div>
+            <div class="dor-count">59,6% colocam saúde como prioridade #1 · 49,9% alimentação como #2</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px; background:white; border:var(--border); border-radius:10px; padding:16px 20px; border-left:3px solid var(--red);">
+      <div style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--red); margin-bottom:6px;">Implicação direta para 2026</div>
+      <div style="font-size:13px; color:var(--gray-800); line-height:1.6;">Os dados da pesquisa são o argumento mais forte que temos para negociar com parceiros. Um stand sem meta de negócio em 2026 é uma oportunidade perdida de transformar voz de FoodLover em alavanca de negociação.</div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- PROPÓSITO DETALHADO E PILARES -->
+<section class="section prop-section">
+  <div class="container">
+    <div class="lbl">Propósito e pilares</div>
+    <h2>O que justifica a ação presencial</h2>
+    <p class="sub" style="margin-bottom:24px">A ação presencial não é um evento de RH. É o único momento do ano onde conseguimos dados comportamentais ao vivo, conversa consultiva real e conversão direta em eleição.</p>
+
+    <div class="prop-linha">
+      <div class="prop-linha-label">Linha do propósito · 2026</div>
+      <div class="prop-linha-text">Converter <span>engajamento informado em eleição consciente</span> — gerando dados que fortalecem negociações e adesão que sustenta a rentabilidade do pacote.</div>
+    </div>
+
+    <div class="pilares-grid">
+      <div class="pilar-card">
+        <div class="pilar-icon">📊</div>
+        <div class="pilar-title">Dados comportamentais de qualidade</div>
+        <div class="pilar-desc">Capturar o que os FoodLovers realmente pensam sobre cada benefício — ao vivo, no momento de decisão. Insumo direto para renegociação com parceiros em 2026 e planejamento 2027.</div>
+        <div class="pilar-meta">↳ Meta: dados estruturados por parceiro pós-evento</div>
+      </div>
+      <div class="pilar-card">
+        <div class="pilar-icon">🎯</div>
+        <div class="pilar-title">Resolução de dores mapeadas</div>
+        <div class="pilar-desc">Cada stand com as dores da pesquisa em mãos. O consultor não chega de surpresa — ele sabe o que o FoodLover reclama e vem preparado para responder ou registrar.</div>
+        <div class="pilar-meta">↳ Meta: redução de menções negativas recorrentes</div>
+      </div>
+      <div class="pilar-card">
+        <div class="pilar-icon">💡</div>
+        <div class="pilar-title">Educação que gera adesão consciente</div>
+        <div class="pilar-desc">NPS de conhecimento do pacote é +10,5 — o mais baixo. A ação presencial é o antídoto: contato humano, telas que explicam e dinâmicas que revelam o valor do benefício antes da escolha.</div>
+        <div class="pilar-meta">↳ Meta: aumento do NPS de conhecimento em 2026</div>
+      </div>
+      <div class="pilar-card">
+        <div class="pilar-icon">📈</div>
+        <div class="pilar-title">Rentabilidade via eleição informada</div>
+        <div class="pilar-desc">Adesão consciente reduz churn de benefício, melhora a base de negociação com operadoras e evita subutilização de produtos que têm custo fixo para a empresa.</div>
+        <div class="pilar-meta">↳ Meta: % de mudança de plano + opcionais aderidos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- METAS POR PARCEIRO -->
+<section class="section metas-section">
+  <div class="container">
+    <div class="lbl">Clareza estratégica por stand</div>
+    <h2>Cada parceiro com propósito e meta</h2>
+    <p class="sub" style="margin-bottom:4px">A provocação da liderança é clara: sem meta de negócio, o stand é estética. Abaixo, a proposta de propósito e KPI para cada parceiro.</p>
+
+    <table class="meta-table">
+      <thead>
+        <tr>
+          <th>Parceiro</th>
+          <th>Propósito do stand</th>
+          <th>Meta de negócio</th>
+          <th>Dado a capturar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bradesco Saúde + Unimed CNU</td>
+          <td style="color:var(--gray-600)">Desmistificar coparticipação e rede credenciada — as dores #1 da pesquisa</td>
+          <td><span class="meta-kpi">↑ retenção de plano</span></td>
+          <td style="color:var(--gray-600)">Principal objeção ao plano atual por perfil</td>
+        </tr>
+        <tr>
+          <td>Wellhub</td>
+          <td style="color:var(--gray-600)">Mostrar cobertura regional e UX — e converter quem ainda não aderiu</td>
+          <td><span class="meta-kpi">↑ adesão + upgrades</span></td>
+          <td style="color:var(--gray-600)">Regiões com maior demanda não atendida</td>
+        </tr>
+        <tr>
+          <td>Vida Link</td>
+          <td style="color:var(--gray-600)">Reverter percepção negativa de preço e provar valor do produto</td>
+          <td><span class="meta-warn">recuperar detratores</span></td>
+          <td style="color:var(--gray-600)">Razões de não uso e pontos de desenvolvimento</td>
+        </tr>
+        <tr>
+          <td>Bradesco Odonto</td>
+          <td style="color:var(--gray-600)">Vender o novo produto — cobertura, rede e diferenciais vs. dentista particular</td>
+          <td><span class="meta-kpi">↑ adesão novo plano</span></td>
+          <td style="color:var(--gray-600)">Perfil de quem recusa + objeções principais</td>
+        </tr>
+        <tr>
+          <td>Avus</td>
+          <td style="color:var(--gray-600)">Apresentar produto novo — cobertura para pais e avós como diferencial de cuidado</td>
+          <td><span class="meta-kpi">↑ adesão novo produto</span></td>
+          <td style="color:var(--gray-600)">Interesse real e perfil demográfico dos interessados</td>
+        </tr>
+        <tr>
+          <td>Stay</td>
+          <td style="color:var(--gray-600)">Engajar na previdência privada via diagnóstico financeiro imediato</td>
+          <td><span class="meta-kpi">↑ adesão previdência</span></td>
+          <td style="color:var(--gray-600)">Nível de conhecimento sobre previdência + intenção</td>
+        </tr>
+        <tr>
+          <td>Leggal</td>
+          <td style="color:var(--gray-600)">Aumentar uso ativo do benefício jurídico — muitos elegem e não usam</td>
+          <td><span class="meta-kpi">↑ uso ativo</span></td>
+          <td style="color:var(--gray-600)">Perfil jurídico + temas de maior interesse</td>
+        </tr>
+        <tr>
+          <td>Meu Pet Club</td>
+          <td style="color:var(--gray-600)">Responder dores de burocracia e limites — e manter base de aderentes</td>
+          <td><span class="meta-warn">reduzir churn</span></td>
+          <td style="color:var(--gray-600)">Razões de insatisfação e comparativo com Pet Love</td>
+        </tr>
+        <tr>
+          <td>Travel Cash</td>
+          <td style="color:var(--gray-600)">Converter novos adesões com oferta exclusiva do dia</td>
+          <td><span class="meta-kpi">↑ novos aderentes</span></td>
+          <td style="color:var(--gray-600)">Perfil de quem não aderiu e barreira de entrada</td>
+        </tr>
+        <tr>
+          <td>iFood Benefícios (VA/VR + Flex)</td>
+          <td style="color:var(--gray-600)">Reposicionar percepção de valor e aumentar adesão de opcionais</td>
+          <td><span class="meta-kpi">↑ adesão opcionais</span></td>
+          <td style="color:var(--gray-600)">Percepção de valor vs. mercado + intenção de eleição de flex</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- CONEXÃO COM AÇÃO PRESENCIAL -->
+<section class="section acao-section">
+  <div class="container">
+    <div class="lbl">Como tudo se conecta</div>
+    <h2>A ação presencial como instrumento estratégico</h2>
+    <p class="sub" style="margin-bottom:4px">O dia 16/06 não existe isolado. Ele é o pico de uma jornada que começa antes e tem impacto depois.</p>
+
+    <div class="acao-cards">
+      <div class="acao-card ac-before">
+        <div class="acao-step">Antes · Até 15/06</div>
+        <div class="acao-title">Preparação e direcionamento</div>
+        <div class="acao-desc">Comunicação interna com roteiro personalizado por perfil. FoodLover chega sabendo o que quer ver — não descobre no corredor. Parceiros chegam com as dores da pesquisa em mãos e meta definida.</div>
+      </div>
+      <div class="acao-card ac-during">
+        <div class="acao-step">Durante · 16/06</div>
+        <div class="acao-title">Captura + Conversão</div>
+        <div class="acao-desc">Consultores consultivos, telas com dados, dinâmicas de 5 minutos. Badge rastreia trajeto. Pulso rápido em cada stand. Eleição assistida disponível o dia todo. Sorteios às 17h como âncora de encerramento.</div>
+      </div>
+      <div class="acao-card ac-after">
+        <div class="acao-step">Depois · D+1 em diante</div>
+        <div class="acao-title">Inteligência e negociação</div>
+        <div class="acao-desc">Relatório consolidado: conversão por benefício, dores mais mencionadas, NPS do evento. Dados que entram direto nas negociações com parceiros e no planejamento da Eleição 2027.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px; background:var(--ink); border-radius:12px; padding:22px 26px; display:flex; align-items:flex-start; gap:18px;">
+      <div style="font-size:22px; flex-shrink:0; margin-top:2px;">💬</div>
+      <div>
+        <div style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:rgba(255,255,255,.3); margin-bottom:8px;">Por que justificar assim para a liderança</div>
+        <div style="font-size:13px; color:rgba(255,255,255,.6); line-height:1.65;">A Eleição 2026 é a primeira com propósito de negócio explícito. Cada real investido no evento tem retorno mensurável: dados para negociar contratos, adesão que reduz custo por cabeça, e NPS que cresce quando o FoodLover sente que foi ouvido. Isso não é operação — é estratégia de pessoas com impacto financeiro direto.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="ft">
+      <span class="ft-brand">iFood People · Benefícios 2026</span>
+      <span>Material estratégico interno · Confidencial</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
